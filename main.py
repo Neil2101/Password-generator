@@ -11,3 +11,4 @@ def menu():
       break
     else:
       print('Sry, I didn\'understand what do you meant. please try again')
+menu()
