@@ -30,3 +30,4 @@ def passwordgenerator():
     print("sorry, something went wrong: " + str(E))
   finally:
       myfile.close()
+passwordgenerator()
