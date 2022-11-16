@@ -8,9 +8,9 @@ def passwordgenerator():
     numbers = [range(0,9)]
 
     numletters = input("how much letters do you want? Answer: ")
-
     numnumbers = input("how much numbers do you want? Answer: ")
-
+    username = input("what's the accompanying username? Answer: ")
+    
     for j in range(0,int(numnumbers)):
       shuffle(letters)
       a = numbers[randint(0,len(numbers)-1)]
@@ -23,7 +23,8 @@ def passwordgenerator():
     shuffle(password)
     Password = ''.join(password)
     with open('Pythonstorage.txt', "a") as myfile:
-        myfile.write(str(Password)+', ')
+        myfile.write("Username: " +str(username) + "Password: " + str(Password) + """,
+                    """)
     print(Password)
   except Exception as E:
     print("sorry, something went wrong: " + str(E))
