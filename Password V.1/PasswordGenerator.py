@@ -12,30 +12,24 @@ def passwordgenerator():
 		enter = """
 		"""
 		password = []
-		letters = [
+		characters = [
 		 "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
 		 "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D",
 		 "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S",
-		 "T", "T", "V", "W", "X", "Y", "Z"
+		 "T", "T", "V", "W", "X", "Y", "Z","0", "1", "2", "3", "4", "5", "6", "7", 
+		 "8", "9"
 		]
-
-		numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 		
 		#all the required input
 		
-		numletters = input("how much letters do you want? Answer: ")
-		numnumbers = input("how much numbers do you want? Answer: ")
-		username = input("what's the accompanying username? Answer: ")
+		numchar = input("how much characters do you want? >>> ")
+		username = input("what's the accompanying username? >>> ")
 		
 		#makes the amount of letters and numbers that the user selected
 		
-		for j in range(0, int(numnumbers)):
-			shuffle(letters)
-			a = numbers[randint(0, len(numbers) - 1)]
-			password.append(a)
-		for k in range(0, int(numletters)):
-			shuffle(numbers)
-			b = letters[randint(0, len(letters) - 1)]
+		for i in range(0, int(characters)):
+			shuffle(characters)
+			b = letters[randint(0, len(characters) - 1)]
 			password.append(b)
 			
 		#makes it more random
